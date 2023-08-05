@@ -32,9 +32,9 @@ const botToken = '516ff9caa967e753-dd2295bc24ac206b-d624986d90a59abf';
 
 // app.post('/webhook', bot.middleware());
 
-// app.get('/', (req, res) => {
-//     res.send('Using global content security policy!');
-// });
+app.get('/', (req, res) => {
+    res.send('Using global content security policy!');
+});
 
 // app.post('/sendData', (req, res) => {
 //     return res.send('Hello from POST');
@@ -44,7 +44,7 @@ const botToken = '516ff9caa967e753-dd2295bc24ac206b-d624986d90a59abf';
 //     return res.send('Hello from GET');
 // });
 
-app.listen(process.env.PORT || 3000 , () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Бот слушает порт ${process.env.PORT}`);
 
     // // Устанавливаем вебхуки после того, как сервер запущен и прослушивает порт
@@ -52,7 +52,7 @@ app.listen(process.env.PORT || 3000 , () => {
     //     bot.setWebhook(webhookUrl).catch((error) => {
     //         console.error('Ошибка установки вебхука:', error);
     //     })
-       
+
     // } catch (error) {
     //     console.log(error)
     // }
