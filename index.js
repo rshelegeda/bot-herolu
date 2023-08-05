@@ -36,13 +36,13 @@ app.get('/', (req, res) => {
     res.send('Using global content security policy!');
 });
 
-// app.post('/sendData', (req, res) => {
-//     return res.send('Hello from POST');
-// });
+app.post('/sendData', (req, res) => {
+    return res.send('Hello from POST');
+});
 
-// app.get('/getData', (req, res) => {
-//     return res.send('Hello from GET');
-// });
+app.get('/getData', (req, res) => {
+    return res.send('Hello from GET');
+});
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Бот слушает порт ${process.env.PORT}`);
