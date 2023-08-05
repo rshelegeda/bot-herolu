@@ -4,12 +4,13 @@
 // const BotEvents = require('viber-bot').Events;
 // const TextMessage = require('viber-bot').Message.Text;
 const express = require('express');
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
 
 const botToken = '516ff9caa967e753-dd2295bc24ac206b-d624986d90a59abf';
-const port = 3000;
+
 
 
 // const bot = new ViberBot({
@@ -43,8 +44,8 @@ const port = 3000;
 //     return res.send('Hello from GET');
 // });
 
-app.listen(port, () => {
-    console.log(`Бот слушает порт ${port}`);
+app.listen(process.env.PORT || 3000 , () => {
+    console.log(`Бот слушает порт ${process.env.PORT}`);
 
     // // Устанавливаем вебхуки после того, как сервер запущен и прослушивает порт
     // try {
