@@ -30,7 +30,7 @@ const webhookUrl = "https://cryptic-shore-64677-904cb630fee4.herokuapp.com";
 
 
 
-app.post('/webhook', bot.middleware());
+
 
 app.get('/', (req, res) => {
     res.send('Using global content security policy!');
@@ -43,6 +43,8 @@ app.post('/sendData', (req, res) => {
 app.get('/getData', (req, res) => {
     return res.send('Hello from GET');
 });
+
+app.post('/webhook', bot.middleware());
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Бот слушает порт ${process.env.PORT}`);
