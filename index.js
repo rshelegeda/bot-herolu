@@ -44,19 +44,14 @@ app.get('/getData', (req, res) => {
     return res.send('Hello from GET');
 });
 
-app.post('/webhook', bot.middleware());
+app.use("/viber/webhook", bot.middleware());
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Бот слушает порт ${process.env.PORT}`);
-
-    // Устанавливаем вебхуки после того, как сервер запущен и прослушивает порт
-    try {
-        bot.setWebhook(webhookUrl+"/webhook").catch((error) => {
-            console.error('Ошибка установки вебхука:', error);
-        })
-
-    } catch (error) {
-        console.log(error)
-    }
+app.listen(process.env.PORT, () => {
+  console.log(`Application running on port: ${process.env.PORT}`);
+  bot.setWebhook(`${webhookUrl}/viber/webhook`).catch(error => {
+    console.log('Can not set webhook on following server. Is it running?');
+    console.error(error);
+    process.exit(1);
+  });
 });
 
