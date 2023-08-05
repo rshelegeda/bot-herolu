@@ -31,6 +31,10 @@ const port = 3000;
 
 // app.post('/webhook', bot.middleware());
 
+app.get('/', (req, res) => {
+    res.send('Using global content security policy!');
+});
+
 app.post('/sendData', (req, res) => {
     return res.send('Hello from POST');
 });
