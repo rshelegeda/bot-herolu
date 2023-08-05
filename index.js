@@ -47,14 +47,14 @@ app.get('/getData', (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Бот слушает порт ${process.env.PORT}`);
 
-    // // Устанавливаем вебхуки после того, как сервер запущен и прослушивает порт
-    // try {
-    //     bot.setWebhook(webhookUrl).catch((error) => {
-    //         console.error('Ошибка установки вебхука:', error);
-    //     })
+    // Устанавливаем вебхуки после того, как сервер запущен и прослушивает порт
+    try {
+        bot.setWebhook(webhookUrl+"/webhook").catch((error) => {
+            console.error('Ошибка установки вебхука:', error);
+        })
 
-    // } catch (error) {
-    //     console.log(error)
-    // }
+    } catch (error) {
+        console.log(error)
+    }
 });
 
