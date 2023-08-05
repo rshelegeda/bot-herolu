@@ -31,17 +31,17 @@ const port = 3000;
 
 // app.post('/webhook', bot.middleware());
 
-app.get('/', (req, res) => {
-    res.send('Using global content security policy!');
-});
+// app.get('/', (req, res) => {
+//     res.send('Using global content security policy!');
+// });
 
-app.post('/sendData', (req, res) => {
-    return res.send('Hello from POST');
-});
+// app.post('/sendData', (req, res) => {
+//     return res.send('Hello from POST');
+// });
 
-app.get('/getData', (req, res) => {
-    return res.send('Hello from GET');
-});
+// app.get('/getData', (req, res) => {
+//     return res.send('Hello from GET');
+// });
 
 app.listen(port, () => {
     console.log(`Бот слушает порт ${port}`);
