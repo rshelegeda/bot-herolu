@@ -29,6 +29,18 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     response.send(new TextMessage(`Message received.`));
 });
 
+app.get('/', (req, res) => {
+    res.send('Using global content security policy!');
+});
+
+app.post('/sendData', (req, res) => {
+    return res.send('Hello from POST');
+});
+
+app.get('/getData', (req, res) => {
+    return res.send('Hello from GET');
+});
+
 const port = process.env.PORT || 3000;
 
 app.use("/viber/webhook", bot.middleware());
