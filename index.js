@@ -1,11 +1,11 @@
 
-// const appMOngo = new Realm.App({ id: "application-0-cxmvu" });
-// const credentials = Realm.Credentials.anonymous();
-// try {
-//   const user = await appMOngo.logIn(credentials);
-// } catch(err) {
-//   console.error("Failed to log in", err);
-// };
+const appMOngo = new Realm.App({ id: "application-0-cxmvu" });
+const credentials = Realm.Credentials.anonymous();
+try {
+  const user = await appMOngo.logIn(credentials);
+} catch(err) {
+  console.error("Failed to log in", err);
+};
 
 const ViberBot = require('viber-bot').Bot,
     BotEvents = require('viber-bot').Events,
