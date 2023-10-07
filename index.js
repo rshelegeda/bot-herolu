@@ -1,4 +1,11 @@
 
+const appMOngo = new Realm.App({ id: "application-0-uxeil" });
+const credentials = Realm.Credentials.anonymous();
+try {
+  const user = await appMOngo.logIn(credentials);
+} catch(err) {
+  console.error("Failed to log in", err);
+};
 
 const ViberBot = require('viber-bot').Bot,
     BotEvents = require('viber-bot').Events,
@@ -15,7 +22,7 @@ if (!process.env.BOT_TOKEN) {
 if (!process.env.EXPOSE_URL) {
     console.log('Could not find exposing url');
     return;
-}
+};
 
 const bot = new ViberBot({
     authToken: process.env.BOT_TOKEN,
