@@ -1,9 +1,8 @@
 {
-    "app_id": "application-0-uxeil",
+    "app_id": "application-0-cxmvu",
     "config_version": 20210101,
     "name": "Application-0",
     "location": "DE-FF",
     "provider_region": "aws-eu-central-1",
-    "deployment_model": "LOCAL",
-    "environment": "production"
+    "deployment_model": "LOCAL"
 }
