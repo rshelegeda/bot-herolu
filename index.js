@@ -1,3 +1,5 @@
+
+
 const ViberBot = require('viber-bot').Bot,
     BotEvents = require('viber-bot').Events,
     TextMessage = require('viber-bot').Message.Text,
