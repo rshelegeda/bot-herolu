@@ -26,6 +26,7 @@ bot.on(BotEvents.SUBSCRIBED, response => {
 });
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
+    
     response.send(new TextMessage(`Message received.`));
 });
 
